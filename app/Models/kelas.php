@@ -12,7 +12,7 @@ class kelas extends Model
     protected $table='kelas';
     
     //set primarykey
-    protected $primaryKey = 'nik';
+    protected $primaryKey = 'id_kelas';
 
 
     public $incrementing = false;
