@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +14,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//layout
+Route::get('/', [AdminController::class,'index']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//login 
+Route::get('login',[SiswaController::class,'login']);
+Route::post('login',[SiswaController::class,'ceklogin']);
+
+//petugas
+Route::get('siswa',[AdminController::class,'siswa']);
+    
