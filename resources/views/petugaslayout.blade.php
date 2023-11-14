@@ -247,7 +247,7 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a class="" href="{{url('/')}}"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
                         <a class="ui-elements.html" href="{{url('siswa')}}"><i class="fa fa-desktop"></i> Data Siswa</a>
