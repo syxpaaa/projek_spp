@@ -1,6 +1,5 @@
 @extends('petugaslayout')
 @section('konten')
-
 <div id="page-wrapper">
     <div class="header"> 
                   <h1 class="page-header">
@@ -10,20 +9,14 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Library</a></li>
                 <li class="active">Data</li>
-              </ol> 
-                              
-  </div>
-  
+              </ol>               
+    </div>
       <div id="page-inner">
-
-          <!-- /. ROW  -->
-
           <div class="row">
               <div class="col-md-3 col-sm-12 col-xs-12">
                   <div class="panel panel-primary text-center no-boder blue" style="background-color:#8EACCD ">
                       <div class="panel-left pull-left " style="background-color:#8EACCD ">
                           <i class="fa fa-eye fa-5x"></i>
-                          
                       </div>
                       <div class="panel-right" style="background-color:#8EACCD ">
                           <h3>10,253</h3>
@@ -36,11 +29,9 @@
                         <div class="panel-left pull-left blue" style="background-color:#8EACCD ">
                           <i class="fa fa-shopping-cart fa-5x"></i>
                           </div>
-                          
                       <div class="panel-right" style="background-color:#8EACCD ">
                       <h3>33,180 </h3>
                          <strong> Sales</strong>
-
                       </div>
                   </div>
               </div>
@@ -48,12 +39,10 @@
                   <div class="panel panel-primary text-center no-boder blue" style="background-color:#8EACCD">
                       <div class="panel-left pull-left blue" style="background-color:#8EACCD ">
                           <i class="fa fa fa-comments fa-5x"></i>
-                         
                       </div>
                       <div class="panel-right" style="background-color:#8EACCD ">
                        <h3>16,022 </h3>
                          <strong> Comments </strong>
-
                       </div>
                   </div>
               </div>
@@ -61,25 +50,21 @@
                   <div class="panel panel-primary text-center no-boder blue" style="background-color:#8EACCD ">
                       <div class="panel-left pull-left blue" style="background-color:#8EACCD ">
                           <i class="fa fa-users fa-5x"></i>
-                          
                       </div>
                       <div class="panel-right" style="background-color:#8EACCD ">
                       <h3>36,752 </h3>
                        <strong>No. of Visits</strong>
-
                       </div>
                   </div>
               </div>
           </div>
   <div class="row">
       <div class="col-xs-6 col-md-3">
-
   </div><!--/.row-->
           <div class="row">
           </div>
           <div class="row">
           <div class="col-md-12">
-          
               </div>		
           </div> 	
           <!-- /. ROW  -->
@@ -91,7 +76,6 @@
                       </div>
                       <div class="panel-body">
                           <div class="list-group">
-
                               <a href="#" class="list-group-item">
                                   <span class="badge">7 minutes ago</span>
                                   <i class="fa fa-fw fa-comment"></i> Commented on a post
@@ -125,7 +109,6 @@
 
               </div>
               <div class="col-md-8 col-sm-12 col-xs-12">
-
                   <div class="panel panel-default">
                       <div class="panel-heading" style="background-color:#8EACCD ">
                           Responsive Table Example
@@ -185,7 +168,6 @@
                                           <td>Wrap4585</td>
                                           <td>name@site.com</td>
                                       </tr>
-
                                   </tbody>
                               </table>
                           </div>
@@ -195,15 +177,9 @@
               </div>
           </div>
           <!-- /. ROW  -->
-      
-  
           <footer><p>All right reserved. Template by: <a href="http://webthemez.com">WebThemez</a></p>
-          
-  
           </footer>
       </div>
-      <!-- /. PAGE INNER  -->
   </div>
-  <!-- /. PAGE WRAPPER  -->
 </div>
 @endsection

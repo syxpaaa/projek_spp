@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-    <div id="main" class="d-flex vh-100 align-items-center"  style="background-color: #abd9fa;">
+    <div id="main" class="d-flex vh-100 align-items-center"  style="background-color: rgb(43, 155, 230), 199, 250);">
         <div class="container-fluid">
             <div class="card mx-auto border-0"  style="background-color: #9DB2BF;">
                 <div class="card-body">
@@ -33,11 +33,19 @@
                         Gagal login
                       </div>
                     @endif
-                    <form action="{{url('login')}}" method="post">
+                    <form action="{{url('masuk')}}" method="post">
                         @csrf
                         <div class="mb-3">
-                            <input type="number" id="nisn" name="nisn" class="form-control py-2" placeholder="nisn">
-                            @error('nisn')
+                            <input type="text" id="username" name="username" class="form-control py-2" placeholder="username">
+                            @error('username')
+                                <div class="form-text">
+                                    {{$message}}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" id="password" name="password" class="form-control py-2" placeholder="password">
+                            @error('password')
                                 <div class="form-text">
                                     {{$message}}
                                 </div>

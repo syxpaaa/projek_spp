@@ -13,11 +13,12 @@ class SiswaController extends Controller
 
     public function ceklogin(Request $request){
         $p = new siswa();
-        //cek username dan password exists(ada)di tabel masyarakat
-        if ($p->where('nis',$request->input('nis'))->where('password',$request->input('password'))->exists()) {
-            session(['nis'=>$request->input('nis')]);
+        if ($p->where('nisn',$request->input('nisn'))->exists()) {
+            session(['nisn'=>$request->input('nisn')]);
             return redirect('/');
         }
-        return back()->with('pesan','username dan password belum terdaftar kakak');
+        return back()->with('pesan','nisn salah!!');
     }
+
+    
 }
