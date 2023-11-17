@@ -31,4 +31,3 @@ Route::post('kelas',[AdminController::class,'cekdatakelas']);
 Route::get('petugas',[AdminController::class,'petugas']);
 Route::post('petugas',[AdminController::class,'cekdatapetugas']);
 Route::get('spp',[AdminController::class,'spp']);
-

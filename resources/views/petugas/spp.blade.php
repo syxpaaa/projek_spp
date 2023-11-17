@@ -13,7 +13,6 @@
                         <table class="table table-striped table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>No.</th>
                                     <th>NISN</th>
                                     <th>Nis</th>
                                     <th>Nama</th>
@@ -22,8 +21,23 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                @foreach ($data as $inem)
+                                <tr>
+                                    <td>{{$inem->nisn}}</td>
+                                    <td>{{$inem->nis}}</td>
+                                    <td>{{$inem->nama}}</td>
+                                    <td>{{$inem->id_kelas}}</td>
+                                    <td>{{$inem->alamat}}</td>
+                                    <td class="center">
+                                        <a href="{{url('edit/'.$inem->id_petugas)}}" class="btn btn-light" style="background-color:#8EACCD "><i class="fa fa-edit "></i> Edit</a>
+                                        <a href="hapus/{{$inem->id_petugas}}" class="btn btn-danger"><i class="fa fa-pencil"></i> Delete</a>
+                                        </td>
+                                </tr>
+                                @endforeach
                             </tbody>
+                            <a href="{{url('siswa/tambah')}}" class="btn btn-light" style="background-color:#8EACCD ">
+                                <i class=""></i> Tambah
+                            </a>
                         </table>
                     </div>
                 </div>
