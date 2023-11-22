@@ -34,8 +34,8 @@ class adminController extends Controller
         $m = new petugas();
         return view('petugas.petugas',['data'=>$m->all()]);
     }
-    public function tambahpetugas(){
-        return view('petugas.tambahpetugas');
+    public function Tambahpetugas(){
+        return view("petugas.tambahpetugas");
     }
     public function simpen(request $request){
         $p =new petugas();
@@ -43,12 +43,35 @@ class adminController extends Controller
             'username'=>'required',
             'password'=>'required',
             'nama_petugas'=>'required',
-            'level'=>'required'
+           'level'=>'required'
         ]);
         $p->create($request->all());
-        if ($p->where('username',$request->input('username'))->where('password',$request->input('password'))->where('nama_petugas',$request->input('nama_petugas'))->where('level',$request->input('level'))->exists()){
-            return redirect('kelas')->with('pesan','registrasi berhasil');
-        }
+            return back()->with('pesan','tambah petugas berhasil');
+    }
+
+    public function hapus($id){
+        $petugas = new petugas();
+        $petugas = $petugas->find($id);
+        $petugas->delete();
+        return back();
+    }
+
+    public function edit($id){
+        $petugas = new petugas();
+        return view('petugas.editpetugas',['editpet'=>$petugas->find($id)]);
+    }
+    public function update(Request $request,$id){
+        $validasi = $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+            'nama_petugas' => 'required',
+            'level'=> 'required'
+        ]);
+        
+        $petugas = new petugas();
+        $petugas = $petugas->find($id)->update($request->all());;
+       
+        return redirect('/admin/petugas')->with('Pesan','Update Data Berhasil');;
     }
 
 

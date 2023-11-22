@@ -9,7 +9,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12 ">
                 <div class="panel panel-default" style="margin-top: 100px">
             <div class="panel-heading" style="background-color:#8EACCD ">
-                Tambah petugas
+                Tambah kelas
             </div>
             <div class="card-body">
                 @if (session('pesan'))

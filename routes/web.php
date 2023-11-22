@@ -27,9 +27,12 @@ Route::post('masuk',[adminController::class,'cekmasuk']);
 Route::get('keluar',[adminController::class,'keluar']);
 
 //petugas
-Route::get('tambahpetugas',[AdminController::class,'tambahpetugas']);
-Route::post('simpan',[AdminController::class,'simpan']);
+Route::get('Tambahpetugas',[AdminController::class,'Tambahpetugas']);
+Route::post('Tambahpetugas',[AdminController::class,'simpen']);
 Route::get('petugas',[AdminController::class,'petugas']);
+Route::get('hapus/{id}',[adminController::class,'hapus']);
+Route::get('/edit/{id}',[AdminController::class,'edit']);
+Route::post('/edit/{id}',[AdminController::class,'update']);
 
 //murid
 Route::get('siswa',[AdminController::class,'siswa']);
