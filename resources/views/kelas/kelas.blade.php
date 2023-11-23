@@ -9,6 +9,7 @@
                         <div class="panel-heading" style="background-color:#8EACCD ">
                             Data kelas
                         </div>
+                        <a href="{{ url('Tambahkelas') }}" class="btn btn-light " style="background-color:#8EACCD">Tambah</a>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover">
@@ -27,15 +28,14 @@
                                                 <td>{{ $inem->nama_kelas }}</td>
                                                 <td>{{ $inem->kompetensi_keahlian }}</td>
                                                 <td class="center">
-                                                    <a href="{{url('edit/'.$inem->id_petugas)}}" class="btn btn-light" style="background-color:#8EACCD "><i class="fa fa-edit "></i> Edit</a>
-                                                    <a href="hapus/{{$inem->id_petugas}}" class="btn btn-danger"><i class="fa fa-pencil"></i> Delete</a>
-                                                    </td>
+                                                    <a href="{{ url('editt/' . $inem->id_kelas) }}" class="btn btn-light"
+                                                        style="background-color:#8EACCD ">Edit</a>
+                                                    <a href="{{ url('hapuss/' . $inem->id_kelas) }}"
+                                                        class="btn btn-danger">Delete</a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
-                                    <a href="{{url('siswa/tambah')}}" class="btn btn-light" style="background-color:#8EACCD ">
-                                        <i class=""></i> Tambah
-                                    </a>
                                 </table>
                             </div>
                         </div>

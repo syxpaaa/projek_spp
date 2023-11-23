@@ -8,42 +8,39 @@
                 <div class="panel-heading" style="background-color:#8EACCD ">
                     Data spp
                 </div> 
+                <a href="{{ url('Tambahspp') }}" class="btn btn-light " style="background-color:#8EACCD">Tambah</a>
                 <div class="panel-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>NISN</th>
-                                    <th>Nis</th>
-                                    <th>Nama</th>
-                                    <th>id kelas</th>
-                                    <th>alamat</th>
+                                    <th>id spp</th>
+                                    <th>tahun</th>
+                                    <th>nominal</th>
+                                    <th>aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($data as $inem)
-                                <tr>
-                                    <td>{{$inem->nisn}}</td>
-                                    <td>{{$inem->nis}}</td>
-                                    <td>{{$inem->nama}}</td>
-                                    <td>{{$inem->id_kelas}}</td>
-                                    <td>{{$inem->alamat}}</td>
-                                    <td class="center">
-                                        <a href="{{url('edit/'.$inem->id_petugas)}}" class="btn btn-light" style="background-color:#8EACCD "><i class="fa fa-edit "></i> Edit</a>
-                                        <a href="hapus/{{$inem->id_petugas}}" class="btn btn-danger"><i class="fa fa-pencil"></i> Delete</a>
+                                    <tr>
+                                        <td>{{ $inem->id_spp }}</td>
+                                        <td>{{ $inem->tahun }}</td>
+                                        <td>{{ $inem->nominal }}</td>
+                                        <td class="center">
+                                            <a href="{{ url('edittt/'. $inem->id_spp) }}" class="btn btn-light"
+                                                style="background-color:#8EACCD ">Edit</a>
+                                            <a href="{{ url('hapusss/' . $inem->id_spp) }}"
+                                                class="btn btn-danger">Delete</a>
                                         </td>
-                                </tr>
+                                    </tr>
                                 @endforeach
                             </tbody>
-                            <a href="{{url('siswa/tambah')}}" class="btn btn-light" style="background-color:#8EACCD ">
-                                <i class=""></i> Tambah
-                            </a>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
     </div>
+</div>
 </div>
 @endsection

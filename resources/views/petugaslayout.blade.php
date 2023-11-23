@@ -81,8 +81,11 @@
                 </ul>
 
             </div>
-
+            
         </nav>
+        <div class="container-fluid mt-4">
+            @yield('konten')
+        </div>
         <!-- /. NAV SIDE  -->
     <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
@@ -109,9 +112,6 @@
       <script>
     
       </script>
-<div class="container-fluid mt-4">
-    @yield('konten')
-</div>
 </body>
 
 </html>

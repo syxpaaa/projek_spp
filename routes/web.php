@@ -28,20 +28,33 @@ Route::get('keluar',[adminController::class,'keluar']);
 
 //petugas
 Route::get('Tambahpetugas',[AdminController::class,'Tambahpetugas']);
-Route::post('Tambahpetugas',[AdminController::class,'simpen']);
+Route::post('Tambahpetugas',[AdminController::class,'cektambahpetugas']);
 Route::get('petugas',[AdminController::class,'petugas']);
 Route::get('hapus/{id}',[adminController::class,'hapus']);
-Route::get('/edit/{id}',[AdminController::class,'edit']);
-Route::post('/edit/{id}',[AdminController::class,'update']);
+Route::get('edit/{id}',[AdminController::class,'edit']);
+Route::post('edit/{id}',[AdminController::class,'update']);
 
 //murid
 Route::get('siswa',[AdminController::class,'siswa']);
+Route::get('Tambasiswa',[AdminController::class,'Tambahsiswa']);
+Route::post('Tambasiswa',[AdminController::class,'cektambahsiswa']);
+Route::get('hps/{nisn}',[adminController::class,'hps']);
+Route::get('updat/{nisn}',[AdminController::class,'updat']);
+Route::post('updat/{nisn}',[AdminController::class,'up']);
 
 //kelas
 Route::get('kelas',[AdminController::class,'kelas']);
 Route::post('kelas',[AdminController::class,'cekdatakelas']);
-Route::get('tambahkelas',[AdminController::class,'tambahkelas']);
-Route::post('tambahkelas',[AdminController::class,'cektambahkelas']);
+Route::get('Tambahkelas',[AdminController::class,'Tambahkelas']);
+Route::post('Tambahkelas',[AdminController::class,'cektambahkelas']);
+Route::get('editt/{id}',[AdminController::class,'editt']);
+Route::post('editt/{id}',[AdminController::class,'upd']);
+Route::get('hapuss/{id}',[adminController::class,'hapuss']);
 
 //spp
 Route::get('spp',[AdminController::class,'spp']);
+Route::get('Tambahspp',[AdminController::class,'Tambahspp']);
+Route::post('Tambahspp',[AdminController::class,'cektambahspp']);
+Route::get('hapusss/{id}',[adminController::class,'hapusss']);
+Route::get('edittt/{id}',[AdminController::class,'edittt']);
+Route::post('edittt/{id}',[AdminController::class,'upda']);

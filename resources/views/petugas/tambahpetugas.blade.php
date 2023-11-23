@@ -1,8 +1,5 @@
 @extends('petugaslayout')
 @section('konten')
- 
-<form action="{{url('simpen')}}" method="post">
-    @csrf
     <div id="page-wrapper">
         <div id="page-inner">
             <div class="row">
@@ -23,6 +20,8 @@
                         Gagal tambah petugas
                       </div>
                       @endif
+                      <form action="{{url('Tambahpetugas')}}" method="post">
+                        @csrf
             <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-12">
