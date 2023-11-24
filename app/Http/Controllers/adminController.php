@@ -80,16 +80,16 @@ class adminController extends Controller
         return view("murid.tambahsiswa");
     }
     public function cektambahsiswa(Request $request){ 
+        $s = new siswa();
         $cek = $request->validate([
             'nisn'=>'required',
             'nis'=>'required',
             'nama'=>'required',
             'id_kelas'=>'required',
-            'alamt'=>'required',
+            'alamat'=>'required',
             'no_telp'=>'required',
             'id_spp'=>'required'
         ]);
-        $s = new siswa();
         $s->create($request->all());
         return redirect('siswa');        
     }
@@ -112,7 +112,7 @@ class adminController extends Controller
             'nis'=>'required',
             'nama'=>'required',
             'id_kelas'=>'required',
-            'alamt'=>'required',
+            'alamat'=>'required',
             'no_telp'=>'required',
             'id_spp'=>'required'
     ]);
