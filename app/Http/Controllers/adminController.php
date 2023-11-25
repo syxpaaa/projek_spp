@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\kelas;
+use App\Models\pembayaran;
 use App\Models\petugas;
 use App\Models\siswa;
 use App\Models\spp;
@@ -197,6 +198,33 @@ class adminController extends Controller
         ]);
         $p = $p->find($id)->update($request->all());
         return redirect('spp')->with('Pesan','Update Data Berhasil');
+    }
+
+    //transaksi
+    public function transaksi(){
+        $t = new pembayaran();
+        return view('admin.transaksi');
+    }
+
+    public function simpan(Request $request){
+        $t = new pembayaran();
+        $validasi = $request->validate([
+            'id_petugas'=>'required',
+            'nisn'=>'required',
+            'tanggal_dibayar'=>'required',
+            'bulan_dibayar'=>'required',
+            'tahun_dibayar'=>'required',
+            'id_spp'=>'required',
+            'jumlah_dibayar'=>'required'
+        ]);
+        $t->create($request->all());
+        return redirect('admin.pembayaran');
+    }
+
+    //pembayaran
+    public function pembayaran(Request $request){
+        $p = new pembayaran();
+        return view('admin.pembayaran');
     }
    
 

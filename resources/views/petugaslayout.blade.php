@@ -29,7 +29,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html" style="background-color:#8EACCD "><strong>bluebox</strong></a>
+                <a class="navbar-brand" href="index.html" style="background-color:#8EACCD "><strong>Pembayaran spp</strong></a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -70,10 +70,10 @@
                         <a class="table.html" href="{{url('spp')}}"><i class="fa fa-table"></i> Data spp</a>
                     </li>
                     <li>
-                        <a href="form.html"><i class="fa fa-edit"></i> Entri Transaksi </a>
+                        <a class="form.html" href="{{url('transaksi')}}"><i class="fa fa-edit"></i> Entri Transaksi </a>
                     </li>
                     <li>
-                        <a href="form.html"><i class="fa fa-edit"></i> History Pembayaran </a>
+                        <a class="form.html" href="{{url('pembayaran')}}"><i class="fa fa-edit"></i> History Pembayaran </a>
                     </li>
                     <li>
                         <a href="form.html"><i class="fa fa-edit"></i> Laporan </a>

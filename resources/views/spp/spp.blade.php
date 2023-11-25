@@ -1,10 +1,13 @@
 @extends('petugaslayout')
 @section('konten')
 <div id="page-wrapper">
+    <div class="header"> 
+        <h1 class="page-header">Data spp</h1>              
+    </div>
     <div id="page-inner">
         <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 ">
-            <div class="panel panel-default" style="margin-top: 100px">
+            <div class="panel panel-default" style="margin-top: 20px">
                 <div class="panel-heading" style="background-color:#8EACCD ">
                     Data spp
                 </div> 

@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Middleware\cekAdmin;
+use App\Http\Middleware\ValidasiAdmin;
+use App\Http\Middleware\ValidasiSiswa;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,3 +61,10 @@ Route::post('Tambahspp',[AdminController::class,'cektambahspp']);
 Route::get('hapusss/{id}',[adminController::class,'hapusss']);
 Route::get('edittt/{id}',[AdminController::class,'edittt']);
 Route::post('edittt/{id}',[AdminController::class,'upda']);
+
+//transaksi
+Route::get('transaksi',[adminController::class,'transaksi']);
+Route::post('transaksi',[adminController::class,'simpan']);
+
+//pembayaran
+Route::get('pembayaran',[adminController::class,'pembayaran']);
