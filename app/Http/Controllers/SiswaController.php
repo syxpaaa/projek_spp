@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class SiswaController extends Controller
 {
+    public function index(){
+        return view('siswa.halaman');
+    }
     public function login(){
         return view('siswa.login');
     }
@@ -15,7 +18,7 @@ class SiswaController extends Controller
         $p = new siswa();
         if ($p->where('nisn',$request->input('nisn'))->exists()) {
             session(['nisn'=>$request->input('nisn')]);
-            return redirect('/');
+            return redirect('pembayaranspp');
         }
         return back()->with('pesan','nisn salah!!');
     }

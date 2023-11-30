@@ -16,22 +16,23 @@
                             <table class="table table-striped table-bordered table-hover">
                                 <thead>
                                     <tr>
-                                        <th>id petugas</th>
+                                        <th>id pembayaran</th>
+                                        <th>Nis</th>
                                         <th>Nisn</th>
-                                        <th>Kompetensi keahlian</th>
-                                        <th>aksi</th>
+                                        <th>tanggal</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($data as $inem)
                                     <tr>
-                                        <td>{{$inem->nisn}}</td>
+                                        <td>{{$inem->id_pembayaran}}</td>
                                         <td>{{$inem->nis}}</td>
-                                        <td>{{$inem->nama}}</td>
-                                        <td>{{$inem->id_kelas}}</td>
-                                        <td>{{$inem->alamat}}</td>
-                                        <td>{{$inem->no_telp}}</td>
+                                        <td>{{$inem->nisn}}</td>
+                                        <td>{{$inem->tgl_bayar}}</td>
+                                        <td>{{$inem->bulan_dibayar}}</td>
+                                        <td>{{$inem->tahun_dibayar}}</td>
                                         <td>{{$inem->id_spp}}</td>
+                                        <td>{{$inem->jumlah_bayar}}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 //layout
 Route::get('/', [AdminController::class,'index']);
+Route::get('pembayaranspp',[SiswaController::class,'index']);
 
 //login 
 Route::get('login',[SiswaController::class,'login']);
@@ -64,7 +65,7 @@ Route::post('edittt/{id}',[AdminController::class,'upda']);
 
 //transaksi
 Route::get('transaksi',[adminController::class,'transaksi']);
-Route::post('transaksi',[adminController::class,'simpan']);
+Route::post('simpan',[adminController::class,'simpan']);
 
 //pembayaran
 Route::get('pembayaran',[adminController::class,'pembayaran']);

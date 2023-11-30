@@ -211,14 +211,13 @@ class adminController extends Controller
         $validasi = $request->validate([
             'id_petugas'=>'required',
             'nisn'=>'required',
-            'tanggal_dibayar'=>'required',
+            'tgl_bayar'=>'required',
             'bulan_dibayar'=>'required',
             'tahun_dibayar'=>'required',
             'id_spp'=>'required',
-            'jumlah_dibayar'=>'required'
+            'jumlah_bayar'=>'required'
         ]);
-        $t->create($request->all());
-        return redirect('admin.pembayaran');
+        return redirect('admin.transaksi');
     }
 
     //pembayaran
@@ -226,6 +225,8 @@ class adminController extends Controller
         $p = new pembayaran();
         return view('admin.pembayaran');
     }
+
+ 
    
 
 
